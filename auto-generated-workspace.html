@@ -315,40 +315,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
                 }
             );
         },
-        /**
-         * Load the Serial Port JSON Server widget via chilipeppr.load()
-         */
-        loadSpjsWidget: function(callback) {
-
-            var that = this;
-
-            chilipeppr.load(
-                "#com-chilipeppr-widget-spjs-instance",
-                  "http://raw.githubusercontent.com/Oltronic/serijski-port/master/auto-generated-widget.html",
-                function() {
-                    console.log("mycallback got called after loading spjs module");
-                    cprequire(["inline:com-chilipeppr-widget-serialport"], function(spjs) {
-                        //console.log("inside require of " + fm.id);
-                        spjs.setSingleSelectMode();
-                        spjs.init({
-                            isSingleSelectMode: true,
-                            defaultBuffer: "tinyg",
-                            defaultBaud: 115200,
-                            bufferEncouragementMsg: 'Molimo odaberite grbl i 115200 prije pokretanja.'
-                        });
-                        //spjs.showBody();
-                        //spjs.consoleToggle();
-
-                        that.widgetSpjs - spjs;
-
-                        if (callback) callback(spjs);
-
-                    });
-                }
-            );
-        },
-        
-        
+      
         /**
          * Load the Console widget via chilipeppr.load()
          */
@@ -1339,7 +1306,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
             // Serial Port Selector
             // http://jsfiddle.net/chilipeppr/vetj5fvx/
             chilipeppr.load("com-chilipeppr-serialport-spselector",
-                "http://fiddle.jshell.net/chilipeppr/vetj5fvx/show/light/",
+                 "http://raw.githubusercontent.com/Oltronic/serijski-port/master/auto-generated-widget.html",
 
                 function() {
                     cprequire(
