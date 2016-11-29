@@ -5,7 +5,9 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-    <title>Workspace / grbl</title>
+    <title>
+        Oltronic CNC 
+    </title>
 
     <!-- ChiliPeppr is based on bootstrap CSS. -->
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -18,6 +20,11 @@
 .zipwhip-button {
     line-height:0px;
     padding: 1px 2px;
+}
+
+#mainnav {
+    z-index: 5;
+    visibility: collapse;
 }
 .zipwhip {
     background: url('http://www.zipwhip.com/resources/images/favicon.ico') no-repeat top left;
@@ -478,6 +485,39 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
 
 //End Font2Gcode
 
+            
+
+
+
+            // JScut
+            // com-chilipeppr-ws-jscut
+            chilipeppr.load(
+                "#com-chilipeppr-ws-jscut",
+                "http://fiddle.jshell.net/chilipeppr/7ZzSV/show/light/",
+                function() {
+                    require(["inline:org-jscut-gcode-widget"], function(jscut) {
+                        jscut.init();
+                        // setup toggle button
+                        var alBtn = $('#com-chilipeppr-ws-gcode-menu .jscut-button');
+                        var alDiv = $('#com-chilipeppr-ws-jscut');
+                        alBtn.click(function() {
+                            if (alDiv.hasClass("hidden")) {
+                                // unhide
+                                alDiv.removeClass("hidden");
+                                alBtn.addClass("active");
+                            }
+                            else {
+                                alDiv.addClass("hidden");
+                                alBtn.removeClass("active");
+                            }
+                            $(window).trigger('resize');
+
+                        });
+                    });
+                });
+
+            
+            
             this.svg2gcodeObj = function() {
                 return {
                     name: "svg2gcode",
@@ -563,37 +603,6 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
             }();
             this.svg2gcodeObj.init();
             //End SVG2Gcode
-
-
-
-            // JScut
-            // com-chilipeppr-ws-jscut
-            chilipeppr.load(
-                "#com-chilipeppr-ws-jscut",
-                "http://fiddle.jshell.net/chilipeppr/7ZzSV/show/light/",
-                function() {
-                    require(["inline:org-jscut-gcode-widget"], function(jscut) {
-                        jscut.init();
-                        // setup toggle button
-                        var alBtn = $('#com-chilipeppr-ws-gcode-menu .jscut-button');
-                        var alDiv = $('#com-chilipeppr-ws-jscut');
-                        alBtn.click(function() {
-                            if (alDiv.hasClass("hidden")) {
-                                // unhide
-                                alDiv.removeClass("hidden");
-                                alBtn.addClass("active");
-                            }
-                            else {
-                                alDiv.addClass("hidden");
-                                alBtn.removeClass("active");
-                            }
-                            $(window).trigger('resize');
-
-                        });
-                    });
-                });
-
-            
             // Element / Drag Drop
             // Load the dragdrop element into workspace toolbar
             // http://jsfiddle.net/chilipeppr/Z9F6G/
@@ -1340,16 +1349,16 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
     <!-- This is the workspace layout for the GRBL Workspace -->
     <div id="com-chilipeppr-ws-gcode-wrapper" class="dropArea">
         <div id="com-chilipeppr-ws-gcode-dragdropoverlay" class="hidden">
-            <div class="well">Drag and Drop Gcode Files Onto Browser Window</div>
+            <div class="well">>Prenesi GCode u prozor</div>
         </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-3 widgetx padrt left">
                     <!-- 3D Viewer. Must be loaded at top to get z-orders correct -->
-                    <div id="com-chilipeppr-3dviewer">Load 3D Viewport Here</div>
+                    <div id="com-chilipeppr-3dviewer">3D preglednik</div>
                     <!-- Workspace Hdr -->
                     <div id="com-chilipeppr-ws-gcode-hdr" class="com-chilipeppr-ws-hdr zhigh well">
-                        GRBL Workspace
+                        Datoteke
                         <div id="com-chilipeppr-ws-gcode-menu" class="">
                             <div class="pull-right">
                                 <div class="dropdown xpull-right">
@@ -1372,16 +1381,14 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
                         <div class="btn-group"> -->
                         
                             <button type="button" class="btn btn-xs btn-default jscut-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Load file from JSCut" data-trigger="hover" data-delay="100">JScut</button>
+                                                       <button type="button" class="btn btn-xs btn-default macro-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Run a macro." data-trigger="hover" data-delay="100">Macro</button>
                             <button type="button" class="btn btn-xs btn-default svg2gcode-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Konvertujte SVG sliku u Gcode" data-trigger="hover" data-delay="100">SVG Import</button>
-                            <button type="button" class="btn btn-xs btn-default macro-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Run a macro." data-trigger="hover" data-delay="100">Macro</button>
-                           
 
-                            <!-- </div>
-                        <div class="btn-group"> -->
-                            <!-- </div> -->
                         </div>
                     </div>
-                    <div class="zhigh hidden" id="com-chilipeppr-ws-svg2gcode"></div>
+                    
+                   
+                   
                     <!-- Zipwhip Text Messaging -->
                     <div class="zhigh hidden" id="com-chilipeppr-ws-zipwhip"></div>
                     <!-- Auto Leveller -->
@@ -1390,6 +1397,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
                     <div class="zhigh hidden" id="com-chilipeppr-ws-macro">Macro Here</div>
                     <!-- JScut -->
                     <div class="zhigh hidden" id="com-chilipeppr-ws-jscut">Jscut Here</div>
+                    
                     <!-- Eagle BRD -->
                     <div class="zhigh hidden" id="com-chilipeppr-ws-eagle">Eagle BRD Here</div>
                     <!-- GPIO -->
@@ -1400,7 +1408,8 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
 
                     <!-- Touch Plate -->
                     <div class="zhigh hidden" id="com-chilipeppr-ws-touchplate">Touch Plate Here</div>
-
+<!-- SVG2Gcode -->
+                        <div class="zhigh hidden" id="com-chilipeppr-ws-svg2gcode"></div>
                     <!-- Gcode List -->
                     <div id="com-chilipeppr-gcode-list" class="zhigh">Load Gcode List Here</div>
                     <!-- Serial In/Out Text Log-->

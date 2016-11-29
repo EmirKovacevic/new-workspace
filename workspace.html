@@ -6,7 +6,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
     <title>
-        <!--(auto-fill by runme.js-->
+        Oltronic CNC 
     </title>
 
     <!-- ChiliPeppr is based on bootstrap CSS. -->
@@ -39,16 +39,16 @@
     <!-- This is the workspace layout for the GRBL Workspace -->
     <div id="com-chilipeppr-ws-gcode-wrapper" class="dropArea">
         <div id="com-chilipeppr-ws-gcode-dragdropoverlay" class="hidden">
-            <div class="well">Drag and Drop Gcode Files Onto Browser Window</div>
+            <div class="well">>Prenesi GCode u prozor</div>
         </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-3 widgetx padrt left">
                     <!-- 3D Viewer. Must be loaded at top to get z-orders correct -->
-                    <div id="com-chilipeppr-3dviewer">Load 3D Viewport Here</div>
+                    <div id="com-chilipeppr-3dviewer">3D preglednik</div>
                     <!-- Workspace Hdr -->
                     <div id="com-chilipeppr-ws-gcode-hdr" class="com-chilipeppr-ws-hdr zhigh well">
-                        GRBL Workspace
+                        Datoteke
                         <div id="com-chilipeppr-ws-gcode-menu" class="">
                             <div class="pull-right">
                                 <div class="dropdown xpull-right">
@@ -71,16 +71,14 @@
                         <div class="btn-group"> -->
                         
                             <button type="button" class="btn btn-xs btn-default jscut-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Load file from JSCut" data-trigger="hover" data-delay="100">JScut</button>
+                                                       <button type="button" class="btn btn-xs btn-default macro-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Run a macro." data-trigger="hover" data-delay="100">Macro</button>
                             <button type="button" class="btn btn-xs btn-default svg2gcode-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Konvertujte SVG sliku u Gcode" data-trigger="hover" data-delay="100">SVG Import</button>
-                            <button type="button" class="btn btn-xs btn-default macro-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Run a macro." data-trigger="hover" data-delay="100">Macro</button>
-                           
 
-                            <!-- </div>
-                        <div class="btn-group"> -->
-                            <!-- </div> -->
                         </div>
                     </div>
-                    <div class="zhigh hidden" id="com-chilipeppr-ws-svg2gcode"></div>
+                    
+                   
+                   
                     <!-- Zipwhip Text Messaging -->
                     <div class="zhigh hidden" id="com-chilipeppr-ws-zipwhip"></div>
                     <!-- Auto Leveller -->
@@ -89,6 +87,7 @@
                     <div class="zhigh hidden" id="com-chilipeppr-ws-macro">Macro Here</div>
                     <!-- JScut -->
                     <div class="zhigh hidden" id="com-chilipeppr-ws-jscut">Jscut Here</div>
+                    
                     <!-- Eagle BRD -->
                     <div class="zhigh hidden" id="com-chilipeppr-ws-eagle">Eagle BRD Here</div>
                     <!-- GPIO -->
@@ -99,7 +98,8 @@
 
                     <!-- Touch Plate -->
                     <div class="zhigh hidden" id="com-chilipeppr-ws-touchplate">Touch Plate Here</div>
-
+<!-- SVG2Gcode -->
+                        <div class="zhigh hidden" id="com-chilipeppr-ws-svg2gcode"></div>
                     <!-- Gcode List -->
                     <div id="com-chilipeppr-gcode-list" class="zhigh">Load Gcode List Here</div>
                     <!-- Serial In/Out Text Log-->

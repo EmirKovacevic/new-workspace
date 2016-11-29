@@ -313,6 +313,39 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
 
 //End Font2Gcode
 
+            
+
+
+
+            // JScut
+            // com-chilipeppr-ws-jscut
+            chilipeppr.load(
+                "#com-chilipeppr-ws-jscut",
+                "http://fiddle.jshell.net/chilipeppr/7ZzSV/show/light/",
+                function() {
+                    require(["inline:org-jscut-gcode-widget"], function(jscut) {
+                        jscut.init();
+                        // setup toggle button
+                        var alBtn = $('#com-chilipeppr-ws-gcode-menu .jscut-button');
+                        var alDiv = $('#com-chilipeppr-ws-jscut');
+                        alBtn.click(function() {
+                            if (alDiv.hasClass("hidden")) {
+                                // unhide
+                                alDiv.removeClass("hidden");
+                                alBtn.addClass("active");
+                            }
+                            else {
+                                alDiv.addClass("hidden");
+                                alBtn.removeClass("active");
+                            }
+                            $(window).trigger('resize');
+
+                        });
+                    });
+                });
+
+            
+            
             this.svg2gcodeObj = function() {
                 return {
                     name: "svg2gcode",
@@ -398,37 +431,6 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
             }();
             this.svg2gcodeObj.init();
             //End SVG2Gcode
-
-
-
-            // JScut
-            // com-chilipeppr-ws-jscut
-            chilipeppr.load(
-                "#com-chilipeppr-ws-jscut",
-                "http://fiddle.jshell.net/chilipeppr/7ZzSV/show/light/",
-                function() {
-                    require(["inline:org-jscut-gcode-widget"], function(jscut) {
-                        jscut.init();
-                        // setup toggle button
-                        var alBtn = $('#com-chilipeppr-ws-gcode-menu .jscut-button');
-                        var alDiv = $('#com-chilipeppr-ws-jscut');
-                        alBtn.click(function() {
-                            if (alDiv.hasClass("hidden")) {
-                                // unhide
-                                alDiv.removeClass("hidden");
-                                alBtn.addClass("active");
-                            }
-                            else {
-                                alDiv.addClass("hidden");
-                                alBtn.removeClass("active");
-                            }
-                            $(window).trigger('resize');
-
-                        });
-                    });
-                });
-
-            
             // Element / Drag Drop
             // Load the dragdrop element into workspace toolbar
             // http://jsfiddle.net/chilipeppr/Z9F6G/
