@@ -773,7 +773,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
             // Load the dragdrop element into workspace toolbar
             // http://jsfiddle.net/chilipeppr/Z9F6G/
             chilipeppr.load("#com-chilipeppr-ws-gcode-dragdrop",
-                "http://raw.githubusercontent.com/Oltronic/dragdrop/master/auto-generated-widget.html",
+                "http://raw.githubusercontent.com/Oltronic/elem-dragdrop/master/auto-generated-widget.html",
                 function() {
                     require(["inline:com-chilipeppr-elem-dragdrop"], function(dd) {
                         console.log("inside require of dragdrop");
@@ -834,7 +834,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
             // http://jsfiddle.net/chilipeppr/y3HRF
             chilipeppr.load("#com-chilipeppr-3dviewer",
                 //"http://fiddle.jshell.net/chilipeppr/y3HRF/show/light/",
-                "http://raw.githubusercontent.com/chilipeppr/widget-3dviewer/master/auto-generated-widget.html",
+                 "http://raw.githubusercontent.com/Oltronic/widget-3dviewer/master/auto-generated-widget.html",
 
                 function() {
                     console.log("got callback done loading 3d");
@@ -1150,7 +1150,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
             // Gcode List
             // http://jsfiddle.net/chilipeppr/a4g5ds5n/
             chilipeppr.load("#com-chilipeppr-gcode-list",
-                "http://fiddle.jshell.net/chilipeppr/a4g5ds5n/show/light/",
+               "http://raw.githubusercontent.com/Oltronic/widget-gcodelist/master/auto-generated-widget.html",
                 //"http://jsfiddle.net/jarret/0a53jy0x/show/light",
 
                 function() {
@@ -1167,7 +1167,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
             //This widget is locked at version 97 until upgrades can be tested with the override code.
             chilipeppr.load(
                 "com-chilipeppr-xyz",
-                "http://fiddle.jshell.net/chilipeppr/gh45j/97/show/light/",
+                "http://raw.githubusercontent.com/Oltronic/widget-axes/master/auto-generated-widget.html",
 
                 function() {
                     cprequire(
