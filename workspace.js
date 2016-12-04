@@ -153,7 +153,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
 
             chilipeppr.load(
                 "#com-chilipeppr-widget-serialport-instance",
-                "http://fiddle.jshell.net/chilipeppr/vetj5fvx/show/light/",
+                "http://raw.githubusercontent.com/Oltronic/widget-spjs/master/auto-generated-widget.html",
                 function() {
                     console.log("mycallback got called after loading spjs module");
                     cprequire(["inline:com-chilipeppr-widget-serialport"], function(spjs) {
@@ -163,7 +163,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
                             isSingleSelectMode: true,
                             defaultBuffer: "default",
                             defaultBaud: 115200,
-                            bufferEncouragementMsg: 'For your device please choose the "default" buffer in the pulldown and a 115200 baud rate before connecting.'
+                            bufferEncouragementMsg: 'Odaberite grbl i 115200 buffer rate prije konektovanja.'
                         });
                         //spjs.showBody();
                         //spjs.consoleToggle();
