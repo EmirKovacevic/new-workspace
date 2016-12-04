@@ -1448,7 +1448,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
             // com-chilipeppr-grbl
             chilipeppr.load(
                 "com-chilipeppr-grbl",
-                "http://fiddle.jshell.net/jarret/9aaL8jg4/show/light/",
+                "http://fiddle.jshell.net/timaveiro/9aaL8jg4/105/show/light/",
 
                 function() {
                     cprequire(
