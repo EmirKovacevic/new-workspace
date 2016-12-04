@@ -1392,7 +1392,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
             // Serial Port Log Window
             // http://jsfiddle.net/chilipeppr/rczajbx0/
             chilipeppr.load("#com-chilipeppr-serialport-log",
-                "http://fiddle.jshell.net/chilipeppr/rczajbx0/show/light/",
+                 "http://raw.githubusercontent.com/Oltronic/widget-console/master/auto-generated-widget.html",
 
                 function() {
                     cprequire(
@@ -1481,7 +1481,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
             // Serial Port Selector
             // http://jsfiddle.net/chilipeppr/vetj5fvx/
             chilipeppr.load("com-chilipeppr-serialport-spselector",
-                "http://fiddle.jshell.net/chilipeppr/vetj5fvx/show/light/",
+                "http://raw.githubusercontent.com/Oltronic/widget-spjs/master/auto-generated-widget.html",
 
                 function() {
                     cprequire(
