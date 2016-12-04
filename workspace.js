@@ -163,7 +163,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
                             isSingleSelectMode: true,
                             defaultBuffer: "default",
                             defaultBaud: 115200,
-                            bufferEncouragementMsg: 'Odaberite grbl i 115200 buffer rate prije konektovanja.'
+                            bufferEncouragementMsg: 'For your device please choose the "default" buffer in the pulldown and a 115200 baud rate before connecting.'
                         });
                         //spjs.showBody();
                         //spjs.consoleToggle();
