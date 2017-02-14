@@ -2,11 +2,6 @@
     line-height:0px;
     padding: 1px 2px;
 }
-
-#mainnav {
-    z-index: 5;
-    visibility: collapse;
-}
 .zipwhip {
     background: url('http://www.zipwhip.com/resources/images/favicon.ico') no-repeat top left;
     display: inline-block;
